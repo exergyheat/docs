@@ -4,6 +4,8 @@ Open-source documentation for hashrate heating with Home Assistant.
 
 This repository contains the source files for [docs.exergyheat.com](https://docs.exergyheat.com) — guides for integrating bitcoin miners into your smart home heating system.
 
+
+
 ## What's Inside
 
 - **DIY Guides** — Set up Home Assistant, install Exergy integrations, configure automations
