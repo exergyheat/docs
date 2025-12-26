@@ -3,6 +3,12 @@
 
 Control your bitcoin miner like a traditional space heater with thermostatic temperature control.
 
+## Before You Start
+
+- **Miner connected to Home Assistant** - Install the [Canaan Avalon Home Integration](../integrations/exergy-canaan.md) first
+- **Temperature sensor** - Zigbee, WiFi, or any HA-compatible sensor in the room
+- **Home Assistant with HACS** - See our [system configuration guide](../brains/rpi-ha-config.md) if needed
+
 ## How It Works
 
 This automation turns your miner on and off based on room temperature:
@@ -12,12 +18,6 @@ This automation turns your miner on and off based on room temperature:
 3. Repeat to maintain desired temperature
 
 Just like a space heater with a thermostat, but earning bitcoin while heating.
-
-## Prerequisites
-
-- Miner connected via Exergy Canaan integration
-- Temperature sensor in the room (Zigbee, WiFi, or any HA-compatible sensor)
-- Both devices configured in Home Assistant
 
 <!--## Blueprint Installation
 
@@ -45,7 +45,7 @@ Just like a space heater with a thermostat, but earning bitcoin while heating.
 -->
 ## Automation Installation
 
-To use any of the YAML automation examples provided at the bottom of this page:
+To use the YAML automation examples in this guide:
 
 1. Copy the desired YAML code from the examples below
 2. In Home Assistant, navigate to **Settings → Automations & Scenes**
@@ -59,8 +59,6 @@ To use any of the YAML automation examples provided at the bottom of this page:
 Alternatively, you can create each automation through the UI and manually configure the triggers, conditions, and actions based on the examples.
 
 ## Configuration
-
-When creating an automation from this blueprint:
 
 ### Required Inputs
 
@@ -209,3 +207,9 @@ Consider automations that adjust work mode based on time of day.
 ## Dashboard Integration
 
 See [Space Heater Digital Thermostat](../dashboards/space-heater.md) for a matching dashboard to control this automation visually.
+
+## Resources
+
+- [Home Assistant Automation Docs](https://www.home-assistant.io/docs/automation/)
+- [Generic Thermostat Integration](https://www.home-assistant.io/integrations/generic_thermostat/)
+- [Exergy GitHub](https://github.com/exergyheat)

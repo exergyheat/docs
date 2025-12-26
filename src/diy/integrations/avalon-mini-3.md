@@ -1,9 +1,19 @@
 <!--explain in detail how to interact with, interperet sensor data, send commands, and view information for an avalon mini 3 in ha using our canaan integration-->
 # Canaan Avalon Mini 3 in Home Assistant
 
-The Avalon Mini 3 is a compact bitcoin miner designed for home heating applications.
+The Avalon Mini 3 is a compact bitcoin miner designed for home heating applications, producing ~2,900 BTU/hr at full power.
 
-## Miner Specifications
+## Before You Start
+
+Two steps before adding this miner to Home Assistant:
+
+1. **Set up your miner with the Avalon Home App** - Configure WiFi and get your miner's IP address. Download from [Canaan](https://www.canaan.io/avalon-home).
+
+2. **Install the Exergy Canaan integration** - Follow the [Canaan Avalon Home Integration](./exergy-canaan.md) guide to install via HACS and add your miner.
+
+Once both are complete, your Mini 3 will appear in Home Assistant with the sensors and controls below.
+
+## Specifications
 
 | Spec | Value |
 |------|-------|
@@ -17,9 +27,9 @@ The Avalon Mini 3 is a compact bitcoin miner designed for home heating applicati
 | Dimensions | 300 x 140 x 195mm |
 | Weight | ~5.5 kg |
 
-## Avalon Mini 3 Work Modes
+## Work Modes
 
-The Mini 3 supports multiple operating modes via the Exergy integration:
+The Mini 3 supports three operating modes:
 
 ### Heating Mode
 - Optimized for heat output
@@ -38,23 +48,23 @@ The Mini 3 supports multiple operating modes via the Exergy integration:
 - Reduced hashrate and heat output
 - Turns off miner display screen
 
-## Avalon Mini 3 Work Levels
+## Work Levels
 
 ### Eco
 - Reduced power consumption (~450W)
-- Lower heat output
+- Lower heat output (~1,536 BTU/hr)
 - Quieter operation
-- Lower hashrate
+- Lower hashrate (~28 TH/s)
 
 ### Super
 - Maximum performance
 - Full power consumption (~850W)
-- Maximum heat output
-- Highest hashrate
+- Maximum heat output (~2,900 BTU/hr)
+- Highest hashrate (~37 TH/s)
 
-## Available Sensors
+## Home Assistant Entities
 
-When connected via the Exergy Canaan integration, these sensors are available:
+### Sensors
 
 | Sensor | Entity Example | Description |
 |--------|----------------|-------------|
@@ -65,20 +75,20 @@ When connected via the Exergy Canaan integration, these sensors are available:
 | Power | `sensor.avalon_mini_3_power` | Current wattage |
 | Fan Speed | `sensor.avalon_mini_3_fan_speed` | Fan RPM % |
 | Device State | `sensor.avalon_mini_3_state` | Operating status (Idle/Initializing/Working/Fault) |
-| Work Level | `sensor.avalon_mini_3_work_level` | Current Operating Level (Super/Eco) |
-| Work Mode | `sensor.avalon_mini_3_work_mode` | Current Operating Mode (Mining/Heating/Night) |
+| Work Level | `sensor.avalon_mini_3_work_level` | Current level (Super/Eco) |
+| Work Mode | `sensor.avalon_mini_3_work_mode` | Current mode (Mining/Heating/Night) |
 
-## Available Controls
+### Controls
 
 | Control | Entity Example | Options |
 |---------|----------------|---------|
 | Power | `switch.avalon_mini_3_power` | On/Off |
 | Work Mode | `select.avalon_mini_3_work_mode` | Heating, Mining, Night |
 | Work Level | `select.avalon_mini_3_work_level` | Eco, Super |
-| Update | `button.avalon_mini_3_update` | Trigger Manual Sensor Update |
+| Update | `button.avalon_mini_3_update` | Trigger manual sensor update |
 | Reboot | `button.avalon_mini_3_reboot` | Trigger reboot |
 
-![Mini 3 Dashboard](../../assets/exergy-canaan-integration/mini-3-interface.png)
+![Mini 3 in Home Assistant](../../assets/exergy-canaan-integration/mini-3-interface.png)
 
 ## Heating Capacity
 
@@ -93,32 +103,11 @@ The Mini 3 produces approximately **2,900 BTU/hr** at full power, comparable to 
 - Whole-home heating (single unit)
 - Spaces requiring silent operation
 
-## Network Setup
+## What's Next?
 
-The Mini 3 connects to your network via WiFi:
+### Automate Your Heating
+- [Space Heater Thermostat Control](../blueprints/space-heater.md) - Temperature-controlled operation
+- [Time-of-Use Control](../blueprints/time-of-use.md) - Optimize around electricity rates
 
-1. Insert USB WiFi adapter and power on the miner
-2. Use the Avalon Home app for initial miner set up
-3. Find the miner IP address via the Avalon Home app or router admin
-4. Add to Home Assistant via Exergy Canaan integration
-
-## Tips for Best Performance
-
-### Airflow
-- Keep intake and exhaust areas clear
-- Point exhaust into the room you want to heat
-- Don't set items on miner as it gets hot
-
-### Electrical
-- Dedicated 15A circuit recommended
-- Avoid extension cords if possible
-- Use surge protector
-
-### Network
-- Static IP or DHCP reservation helps reliability
-
-## Resources
-
-- [Canaan Official Site](https://www.canaan.io/)
-- [Avalon Home App](https://www.canaan.io/avalon-home)
-- [Exergy Canaan Integration](./exergy-canaan.md)
+### Build a Dashboard
+- [Space Heater Dashboard](../dashboards/space-heater.md) - Thermostat-style interface with mining stats

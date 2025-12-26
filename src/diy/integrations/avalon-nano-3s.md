@@ -1,7 +1,17 @@
 <!--explain in detail how to interact with, interperet sensor data, send commands, and view information for an avalon nano3s in ha using our canaan integration-->
 # Canaan Avalon Nano 3s in Home Assistant
 
-The Avalon Nano 3s is a compact, low-power bitcoin miner designed for desktop or small space heating.
+The Avalon Nano 3s is a compact, low-power bitcoin miner designed for desktop or small space heating, producing ~500 BTU/hr.
+
+## Before You Start
+
+Two steps before adding this miner to Home Assistant:
+
+1. **Set up your miner with the Avalon Home App** - Configure WiFi and get your miner's IP address. Download from [Canaan](https://www.canaan.io/avalon-home).
+
+2. **Install the Exergy Canaan integration** - Follow the [Canaan Avalon Home Integration](./exergy-canaan.md) guide to install via HACS and add your miner.
+
+Once both are complete, your Nano 3s will appear in Home Assistant with the sensors and controls below.
 
 ## Specifications
 
@@ -16,24 +26,25 @@ The Avalon Nano 3s is a compact, low-power bitcoin miner designed for desktop or
 
 ## Work Modes
 
-The Nano 3s supports operating modes via the Exergy integration:
+The Nano 3s supports three operating modes:
 
-### High Mode
-- Optimized for consistent heat output
+### High
+- Maximum performance
 - Standard fan operation
+- Highest heat output
 
-### Mid Mode
-- Optimized for hashrate/efficiency
+### Mid
+- Balanced performance
 - Standard operation
 
-### Low Mode
-- Reduced noise operation
+### Low
+- Reduced noise
 - Lower fan speeds
 - Reduced hashrate
 
-## Available Sensors
+## Home Assistant Entities
 
-When connected via the Exergy Canaan integration:
+### Sensors
 
 | Sensor | Entity Example | Description |
 |--------|----------------|-------------|
@@ -42,19 +53,20 @@ When connected via the Exergy Canaan integration:
 | Power | `sensor.avalon_nano_3s_power` | Current wattage |
 | Device State | `sensor.avalon_nano_3s_state` | Operating status |
 
-## Available Controls
+### Controls
 
 | Control | Entity Example | Options |
 |---------|----------------|---------|
 | Work Mode | `select.avalon_nano_3s_work_mode` | High, Medium, Low |
-| Light Control | `light.avalon_nano_3s_led` | LED Light Color Selection |
-| Light Effects | `light.avalon_nano_3s_led_effect` | LED Light Effect Selection (Off, On, Flash, Breath, Loop) |
+| Light Control | `light.avalon_nano_3s_led` | LED color selection |
+| Light Effects | `light.avalon_nano_3s_led_effect` | Off, On, Flash, Breath, Loop |
 | Reboot | `button.avalon_nano_3s_reboot` | Trigger reboot |
 
-Unfortunantely, the Nano 3s API doesn't support basic power controls. We suggest pairing this with a smart outlet (WiFi, Zigbee, etc.) to completely turn it on and off.
+> **Note:** The Nano 3s API doesn't support power on/off control. We recommend pairing it with a smart outlet (WiFi or Zigbee) if you need remote power control.
 
-![Avalon Mini 3s Dashboard](../../assets/exergy-canaan-integration/avalon-nano3s-dashboard.png)
-![Nano 3s Light Control](../../assets/exergy-canaan-integration/nano-3s-light-control.png)
+![Nano 3s in Home Assistant](../../assets/exergy-canaan-integration/avalon-nano3s-dashboard.png)
+
+![Nano 3s LED Controls](../../assets/exergy-canaan-integration/nano-3s-light-control.png)
 
 ## Heating Capacity
 
@@ -67,7 +79,7 @@ The Nano 3s produces approximately **500 BTU/hr**, similar to a small personal s
 - Learning/educational setups
 
 **Not suitable for:**
-- Room heating (too low output)
+- Room heating (output too low)
 - Primary heating source
 
 ## Use Cases
@@ -95,16 +107,13 @@ The Nano 3s has minimal power requirements:
 - No dedicated circuit needed
 - Can share circuit with other devices
 
-## Network Setup
+## What's Next?
 
-1. Insert WiFi USB adapter
-2. Power on the Nano 3s
-3. Use the Avalon Home app to configure WiFi
-4. Find IP address in app or router admin
-5. Add to Home Assistant via Exergy Canaan integration
+### Add Power Control
+The Nano 3s API doesn't support power on/off. To enable automation, pair with a smart outlet (WiFi or Zigbee) and use the outlet switch in place of a miner power switch in automations.
 
-## Resources
+### Automate Your Miner
+- [Time-of-Use Control](../blueprints/time-of-use.md) - Schedule around electricity rates or noise preferences
 
-- [Canaan Official Site](https://www.canaan.io/)
-- [Avalon Home App](https://www.canaan.io/avalon-home)
-- [Exergy Canaan Integration](./exergy-canaan.md)
+### Build a Dashboard
+- [Space Heater Dashboard](../dashboards/space-heater.md) - Monitor temperature and mining stats

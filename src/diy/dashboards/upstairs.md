@@ -11,6 +11,13 @@ This dashboard provides:
 - Real-time temperature monitoring
 - Mining statistics and earnings tracking
 - Dual heating source coordination (Bitcoin heater + furnace)
+
+## Before You Start
+
+This dashboard requires:
+- **Miner connected** - [Canaan Avalon Home Integration](../integrations/exergy-canaan.md)
+- **Thermostat connected** - Venstar or other smart thermostat in HA
+- **Ocean pool integration** - [Ocean Mining Pool Integration](../integrations/ocean-pool.md) for earnings data
 <!--
 ## System Layout
 
@@ -41,13 +48,13 @@ This dashboard provides:
 - **Primary Heat**: Avalon Q Bitcoin Heater
 - **Backup Heat**: Furnace (HVAC system)
 - **Control**: Venstar Wall Thermostat
-- **Power Modes**: Super (~2.4kW), Standard (~1.8kW), Eco (~1.2kW)
+- **Power Modes**: Super (~1.7kW), Standard (~1.2kW), Eco (~0.8kW)
 
 ## Required Integrations
 
 - **Venstar**: Thermostat integration (Optional to use the Generic Thermostat instead)
 - **Exergy Avalon Home Miner**: Miner Integration
-- **OCEAN Mining Pool**: Exergy Integration to pull in OCEAN Minig Pool Stats
+- **OCEAN Mining Pool**: Exergy Integration to pull in OCEAN Mining Pool Stats
 
 ## Installation
 
@@ -222,13 +229,6 @@ This dashboard provides:
       icon: mdi:book
       name: Documentation
 ```
-
-## Required Integrations
-
-### Core Integrations
-- **Venstar** - For wall thermostat control and temperature monitoring
-- **Avalon Miner** - For Avalon Q control and statistics
-- **Ocean Mining Pool** - For bitcoin mining earnings tracking
 
 ## Entity ID Reference
 
@@ -482,6 +482,7 @@ The dashboard automatically adapts to mobile screens:
 
 ## Resources
 
+- [HVAC Integrated Thermostat Control](../blueprints/hvac.md) - Automation for this setup
 - [Home Assistant Sections Dashboard](https://www.home-assistant.io/dashboards/sections/)
 - [Venstar Integration](https://www.home-assistant.io/integrations/venstar/)
 - [Template Sensors](https://www.home-assistant.io/integrations/template/)

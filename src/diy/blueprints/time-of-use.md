@@ -3,6 +3,12 @@
 
 Schedule your bitcoin miner to run during specific times based on electricity rates, daily schedules, or personal preferences.
 
+## Before You Start
+
+- **Miner connected to Home Assistant** - Install the [Canaan Avalon Home Integration](../integrations/exergy-canaan.md) first
+- **Home Assistant with HACS** - See our [system configuration guide](../brains/rpi-ha-config.md) if needed
+- **Know your electricity rate schedule** - Check your utility bill for TOU periods
+
 ## How It Works
 
 This automation controls when your miner operates:
@@ -61,7 +67,7 @@ Run your miner during off-peak hours to maximize profitability.
 -->
 ## Automation Installation
 
-To use any of the YAML automation examples provided at the bottom of this page:
+To use the YAML automation examples in this guide:
 
 1. Copy the desired YAML code from the examples below
 2. In Home Assistant, navigate to **Settings → Automations & Scenes**

@@ -3,6 +3,16 @@
 
 Monitor your Ocean mining pool earnings and statistics directly in Home Assistant.
 
+## Before You Start
+
+Before installing this integration:
+
+1. **Home Assistant with HACS installed** - This is a custom integration distributed via HACS. See our [system configuration guide](../brains/rpi-ha-config.md) if you need to set up Home Assistant and HACS.
+
+2. **Already mining to Ocean** - Your miners must be configured to mine to Ocean pool. The integration pulls data from Ocean's API based on your wallet address.
+
+3. **Your Ocean wallet address** - The bitcoin address you configured in your miner's pool settings.
+
 ## What is Ocean?
 
 [Ocean](https://ocean.xyz) is a bitcoin mining pool focused on decentralization and transparency. Key features:
@@ -34,8 +44,6 @@ The Exergy Ocean integration provides:
 | Mining Account Active Workers | Count of currently active workers |
 | Mining Account Lifetime Earnings | Total lifetime BTC earnings (scraped from website) |
 
-**Note:** The USD conversion sensor requires an existing exchange rate sensor at `sensor.exchange_rate_1_btc`. Consider using the [Home Assistant Bitcoin integration](https://www.home-assistant.io/integrations/bitcoin/)
-
 ### Worker Specific Sensors
 
 Workers are **automatically discovered** - if you have 3 workers, you'll get 18 additional sensors (6 per worker). Each worker appears as its own device under the main mining account device. For each worker detected, the following sensors are created dynamically:
@@ -49,14 +57,9 @@ Workers are **automatically discovered** - if you have 3 workers, you'll get 18 
 | {worker_name} Lifetime Earnings | Worker's total lifetime BTC earnings (scraped from website) |
 | {worker_name} Status | Connected or Disconnected |
 
+> **Note:** Entity IDs are automatically generated based on your wallet address. Find your actual entity IDs at **Settings → Devices & Services → Exergy Ocean → [your device]**.
 
 ## Installation
-
-### Prerequisites
-
-- Home Assistant with HACS installed
-- Ocean mining account with wallet address
-- Your Ocean wallet address
 
 ### Step 1: Install via HACS
 
@@ -87,11 +90,13 @@ Display your mining earnings alongside miner status:
 type: entities
 title: Mining Stats
 entities:
-  - entity: sensor.ocean_hashrate_24h
+  # Entity IDs vary based on your wallet address
+  # Find yours at Settings → Devices & Services → Exergy Ocean
+  - entity: sensor.ocean_mining_account_hashrate_60s
     name: My Hashrate
-  - entity: sensor.ocean_estimated_daily
-    name: Est. Daily Sats
-  - entity: sensor.ocean_unpaid_balance
+  - entity: sensor.ocean_mining_account_estimated_earnings_next_block
+    name: Est. Earnings
+  - entity: sensor.ocean_mining_account_unpaid_balance
     name: Unpaid Balance
 ```
 
@@ -156,6 +161,17 @@ Your Ocean wallet address is the bitcoin address you configured when setting up 
 - Local miner hashrate is real-time
 - Some variation is normal
 - Significant differences may indicate connectivity issues
+
+## What's Next?
+
+### Connect Your Miners
+To mine to Ocean, you need miners connected to Home Assistant:
+- [Canaan Avalon Home Integration](./exergy-canaan.md) - Connect Avalon miners
+
+### Build a Dashboard
+Ocean sensors work great alongside miner stats:
+- [Space Heater Dashboard](../dashboards/space-heater.md) - Includes mining earnings display
+- [HVAC Dashboard](../dashboards/hvac.md) - System monitoring with earnings
 
 ## Resources
 

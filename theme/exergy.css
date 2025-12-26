@@ -176,27 +176,6 @@ a:hover {
     font-weight: 600;
 }
 
-/* Section indicator vertical bars */
-/* Add border-left to nested chapter lists to show hierarchy */
-.sidebar .chapter ol {
-    border-left: 1px solid;
-    margin-left: 1.2em;
-    padding-left: 0.8em;
-}
-
-/* Light theme: black vertical bars */
-.light .sidebar .chapter ol,
-.rust .sidebar .chapter ol {
-    border-left-color: #18181B;
-}
-
-/* Dark theme: white vertical bars */
-.navy .sidebar .chapter ol,
-.coal .sidebar .chapter ol,
-.ayu .sidebar .chapter ol {
-    border-left-color: #FAFAFA;
-}
-
 /* Code blocks */
 pre {
     border-radius: 6px;
@@ -288,16 +267,16 @@ h1 {
 
 /* ===== THEME PICKER CUSTOMIZATION ===== */
 
-/* Hide unused theme options (rust, coal, ayu) - keep only Auto, Light, Dark */
-#theme-list li:has(button#rust),
-#theme-list li:has(button#coal),
-#theme-list li:has(button#ayu) {
-    display: none;
+/* Hide unused theme options - keep only Auto, Light, Dark (navy) */
+#theme-list button[id="rust"],
+#theme-list button[id="coal"],
+#theme-list button[id="ayu"] {
+    display: none !important;
 }
 
-/* Fallback for browsers without :has() support */
-#theme-list button#rust,
-#theme-list button#coal,
-#theme-list button#ayu {
-    display: none;
+/* Hide parent list items (for browsers with :has() support) */
+#theme-list li:has(button[id="rust"]),
+#theme-list li:has(button[id="coal"]),
+#theme-list li:has(button[id="ayu"]) {
+    display: none !important;
 }

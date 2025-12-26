@@ -3,6 +3,13 @@
 
 Integrate your bitcoin miner into your home's HVAC system as "Stage 1" heating, with your existing furnace as backup.
 
+## Before You Start
+
+- **Miner connected to Home Assistant** - Install the [Canaan Avalon Home Integration](../integrations/exergy-canaan.md) first
+- **Smart thermostat** - Connected to HA (Z-Wave, Zigbee, or WiFi)
+- **Home Assistant with HACS** - See our [system configuration guide](../brains/rpi-ha-config.md) if needed
+- **Professional installation** - Ducting and wiring modifications recommended
+
 ## How It Works
 
 This setup uses your miner as the primary heat source:
@@ -11,28 +18,6 @@ This setup uses your miner as the primary heat source:
 2. **Stage 2 (Furnace)**: If miner can't keep up, furnace activates
 3. **Miner produces bitcoin** while providing base heating
 4. **Furnace only runs** when additional heat is needed
-
-## Prerequisites
-
-### Hardware
-
-- Bitcoin miner (Avalon Q recommended for HVAC integration)
-- Miner output ducted to HVAC supply plenum
-- Multi-stage thermostat connected to Home Assistant
-- HVAC system with accessible stage wiring
-
-### Home Assistant
-
-- Miner connected via Exergy Canaan integration
-- Thermostat connected (Z-Wave, Zigbee, or WiFi)
-- Thermostat reports current stage
-
-### Electrical Work
-
-**Professional installation recommended** for:
-- Ducting miner into HVAC system
-- Rewiring thermostat to separate Stage 1 from Stage 2
-- Ensuring proper airflow and safety
 
 ## System Architecture
 
@@ -78,7 +63,7 @@ This setup uses your miner as the primary heat source:
 -->
 ## Automation Installation
 
-To use any of the YAML automation examples provided at the bottom of this page:
+To use the YAML automation examples in this guide:
 
 1. Copy the desired YAML code from the examples below
 2. In Home Assistant, navigate to **Settings → Automations & Scenes**
@@ -112,7 +97,7 @@ Alternatively, you can create each automation through the UI and manually config
 
 ### Traditional Thermostat Wiring
 
-**Note**: Our recommened thermostat is a Venstat T7900 for its ability to be controlled via local APIs without the need for Cloud interface or third party servers
+**Note**: Our recommended thermostat is a Venstar T7900 for its ability to be controlled via local APIs without the need for Cloud interface or third party servers
 
 Standard HVAC wiring:
 - **W1**: Stage 1 heat (becomes miner via HA)
@@ -227,3 +212,9 @@ With an Avalon Q (~5,630 BTU/hr):
 ## Dashboard Integration
 
 See [HVAC Integrated Wall+Digital Thermostat](../dashboards/hvac.md) for a matching dashboard to monitor this setup.
+
+## Resources
+
+- [Home Assistant Automation Docs](https://www.home-assistant.io/docs/automation/)
+- [Generic Thermostat Integration](https://www.home-assistant.io/integrations/generic_thermostat/)
+- [Exergy GitHub](https://github.com/exergyheat)

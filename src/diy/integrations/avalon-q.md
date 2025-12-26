@@ -1,13 +1,23 @@
 <!--explain in detail how to interact with, interperet sensor data, send commands, and view information for an avalon mini Q in ha using our canaan integration-->
 # Canaan Avalon Q in Home Assistant
 
-The Avalon Q is a higher-performance bitcoin miner suitable for larger heating applications.
+The Avalon Q is a higher-performance bitcoin miner suitable for larger heating applications, producing ~5,630 BTU/hr at full power.
+
+## Before You Start
+
+Two steps before adding this miner to Home Assistant:
+
+1. **Set up your miner with the Avalon Home App** - Configure WiFi or ethernet and get your miner's IP address. Download from [Canaan](https://www.canaan.io/avalon-home).
+
+2. **Install the Exergy Canaan integration** - Follow the [Canaan Avalon Home Integration](./exergy-canaan.md) guide to install via HACS and add your miner.
+
+Once both are complete, your Avalon Q will appear in Home Assistant with the sensors and controls below.
 
 ## Specifications
 
 | Spec | Value |
 |------|-------|
-| Hashrate | ~90 TH/s (varies by mode) |
+| Hashrate | ~90 TH/s (varies by level) |
 | Power | ~1,650W |
 | Heat Output | ~5,630 BTU/hr |
 | Noise Level | ~65 dB |
@@ -16,33 +26,29 @@ The Avalon Q is a higher-performance bitcoin miner suitable for larger heating a
 
 ## Work Levels
 
-The Avalon Q supports multiple operating levels via the Exergy integration:
+The Avalon Q supports three performance levels:
 
-### Super Level
-- ~1,700W
-- Optimized for heat output
-- Full power consumption
-- Maximum performance
+### Super
+- ~1,700W power consumption
 - Maximum heat output
-- Full fan speed for maximum air circulation
+- Full fan speed
 - Highest hashrate
 
-### Standard Level
-- ~1,300W
-- Optimized for hashrate/efficiency
-- Standard operation
-- Slightly reduced fan speed and heat output
-- Medium level hashrate
+### Standard
+- ~1,300W power consumption
+- Balanced performance
+- Slightly reduced fan speed
+- Medium hashrate
 
-### Eco Level
-- ~800W
-- Reduced noise operation
+### Eco
+- ~800W power consumption
+- Reduced noise
 - Lower fan speeds
-- Reduced hashrate and heat output
+- Lower hashrate and heat output
 
-## Available Sensors
+## Home Assistant Entities
 
-When connected via the Exergy Canaan integration:
+### Sensors
 
 | Sensor | Entity Example | Description |
 |--------|----------------|-------------|
@@ -54,7 +60,7 @@ When connected via the Exergy Canaan integration:
 | Fan Speed | `sensor.avalon_q_fan_speed` | Fan RPM % |
 | Device State | `sensor.avalon_q_state` | Operating status |
 
-## Available Controls
+### Controls
 
 | Control | Entity Example | Options |
 |---------|----------------|---------|
@@ -62,7 +68,7 @@ When connected via the Exergy Canaan integration:
 | Work Level | `select.avalon_q_work_level` | Eco, Standard, Super |
 | Reboot | `button.avalon_q_reboot` | Trigger reboot |
 
-![Avalon Q Sensor Dashboard](../../assets/exergy-canaan-integration/avalon-q-dashboard.png)
+![Avalon Q in Home Assistant](../../assets/exergy-canaan-integration/avalon-q-dashboard.png)
 
 ## Heating Capacity
 
@@ -74,11 +80,9 @@ The Avalon Q produces approximately **5,630 BTU/hr** at full power, comparable t
 - HVAC duct integration
 
 **Considerations:**
-- Requires 15A circuit
-- Slightly higher noise level
-- More significant heat output
-- Dedicated circuit recommended
-
+- Requires 15A dedicated circuit
+- Higher noise level than Mini 3
+- Significant heat output
 
 ## HVAC Integration
 
@@ -88,17 +92,15 @@ The Avalon Q is well-suited for integration with existing HVAC systems:
 - Acts as "Stage 1" heating with fossil fuel as "Stage 2"
 - Requires proper airflow management
 
-See [HVAC Integrated Thermostat Control](../blueprints/hvac.md) for automation setup.
+See [HVAC Integrated Thermostat Control](../blueprints/hvac.md) for automation setup and [HVAC Dashboard](../dashboards/hvac.md) for a matching interface.
 
-## Network Setup
+## What's Next?
 
-1. Connect ethernet cable from miner to router or use USB WiFi adapter.
-2. Power on the miner
-3. Use the Avalon Home app or router admin to find the IP address
-4. Add to Home Assistant via Exergy Canaan integration
+### Automate Your Heating
+- [HVAC Integrated Control](../blueprints/hvac.md) - Whole-home thermostat integration
+- [Space Heater Control](../blueprints/space-heater.md) - Standalone room heating
+- [Time-of-Use Control](../blueprints/time-of-use.md) - Optimize around electricity rates
 
-## Resources
-
-- [Canaan Official Site](https://www.canaan.io/)
-- [Avalon Home App](https://www.canaan.io/avalon-home)
-- [Exergy Canaan Integration](./exergy-canaan.md)
+### Build a Dashboard
+- [HVAC Dashboard](../dashboards/hvac.md) - Thermostat + stage indicators
+- [Upstairs Example](../dashboards/upstairs.md) - Real Avalon Q + furnace setup
