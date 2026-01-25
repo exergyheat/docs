@@ -59,10 +59,21 @@ Browse all custom HACS integrations on the [HACS Github](https://github.com/hacs
 
 We built integrations to bring bitcoin miners into the smart home ecosystem. Connect, control, and monitor your home mining hardware just like any other IoT device.
 
+### Miner Integrations
+
 | Integration | Purpose |
 |-------------|---------|
-| [Exergy Canaan](./exergy-canaan.md) | Control & monitor Canaan Avalon miners (Mini 3, Q, Nano 3s) |
-| [Ocean Mining Pool](./ocean-pool.md) | Monitor mining pool earnings and statistics |
+| [Canaan Avalon Home](./exergy-canaan.md) | Control & monitor Canaan Avalon miners (Mini 3, Q, Nano 3s) |
+| [Bitaxe](./bitaxe.md) | Monitor & control Bitaxe open-source miners |
+| [StealthMiner / LuxOS](./stealthminer.md) | Monitor & control miners with LuxOS firmware |
+
+### Pool & Infrastructure Integrations
+
+| Integration | Purpose |
+|-------------|---------|
+| [Ocean Mining Pool](./ocean-pool.md) | Monitor Ocean pool earnings and statistics |
+| [Public Pool](./public-pool.md) | Monitor self-hosted Public Pool instances |
+| [DATUM Gateway](./datum-gateway.md) | Monitor DATUM Gateway block template proxy |
 
 See a full list of Exergy Integrations here:
 

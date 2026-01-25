@@ -31,4 +31,19 @@ Our flagship calculator for evaluating Bitcoin mining as a heating strategy. Fea
 
 ---
 
+### [Solar Monetization Calculator](./solar-monetization.md)
+
+Evaluate whether Bitcoin mining is a better use of your solar energy than selling it back to the grid. Features include:
+
+- **Three input modes** - Estimate from location, enter your production data, or model excess solar
+- **NREL PVWatts integration** - Automatic solar production estimates by ZIP code
+- **Net metering comparison** - Compare mining against bill credits, net billing, or annual cash-out
+- **kWh-based calculations** - Only miner efficiency matters
+- **Three-Knob Override System** - Model different BTC prices, network conditions, and fee environments
+- **Monthly breakdown charts** - See seasonal variations in solar mining revenue
+
+**[Open the Calculator](https://calc.exergyheat.com/#/solar)**
+
+---
+
 *More calculators coming soon.*

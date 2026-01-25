@@ -31,19 +31,50 @@ The calculator fetches live data from public APIs:
 | **Hashprice** | Calculated | Revenue earned per terahash per day ($/TH/day) |
 | **Hashvalue** | Calculated | Satoshis earned per terahash per day (sats/TH/day) |
 
-#### The Two-Knob Override System
+#### The Three-Knob Override System
 
-For "what-if" scenario analysis, you can override the live data using two independent control groups:
+For "what-if" scenario analysis, you can override live data using three independent controls:
 
 **Knob 1 - Price Group:**
 - Edit **BTC Price** and hashprice auto-calculates, OR
 - Edit **Hashprice** and BTC price auto-calculates
+- These two values are inversely implied—changing one recalculates the other
 
 **Knob 2 - Network Group:**
-- Edit **Network Hashrate** and hashvalue auto-calculates, OR
-- Edit **Hashvalue** and network hashrate auto-calculates
+- **Fee %** anchors this group
+- Edit **Network Hashrate** and hashvalue recalculates (Fee % held constant), OR
+- Edit **Hashvalue** and network hashrate recalculates (Fee % held constant)
 
-This lets you model scenarios like "What if BTC hits $150,000?" or "What happens when hashrate doubles?" without conflicting inputs. Click "Reset to live data" to clear overrides.
+**Knob 3 - Fee Percentage:**
+- Slider from **0-99%**
+- Models transaction fee environments
+- When adjusted, hashvalue recalculates (network hashrate held constant)
+- Higher Fee % = more miner revenue per block
+
+**How Fee % Affects Calculations:**
+
+The block reward miners compete for consists of two parts:
+1. **Block subsidy** (currently 3.125 BTC)
+2. **Transaction fees** (variable based on network demand)
+
+Fee % represents transaction fees as a percentage of total block reward:
+```
+Total Block Reward = Block Subsidy / (1 - Fee %)
+```
+
+For example, at 20% fee environment:
+```
+Total Block Reward = 3.125 / (1 - 0.20) = 3.906 BTC
+```
+
+This means miners earn ~25% more than the base subsidy alone.
+
+**Example Scenarios:**
+- "What if BTC hits $150,000?" → Adjust BTC Price (Knob 1)
+- "What happens when hashrate doubles?" → Adjust Network Hashrate (Knob 2)
+- "What if transaction fees spike during an ordinals frenzy?" → Increase Fee % (Knob 3)
+
+Click "Reset to live data" to clear all overrides.
 
 ---
 
@@ -134,16 +165,30 @@ Choose from 8 preset miners or enter custom specifications:
 The number of satoshis a single terahash of mining power earns per day:
 
 ```
-Hashvalue = (Blocks per Day × Block Reward × sats per BTC) / Network Hashrate
+Hashvalue = (Blocks per Day × Total Block Reward × sats per BTC) / Network Hashrate
+```
 
-         = (144 × 3.125 × 100,000,000) / Network Hashrate (TH/s)
+Where Total Block Reward accounts for transaction fees:
+```
+Total Block Reward = Block Subsidy / (1 - Fee %)
+                   = 3.125 / (1 - Fee %)
+```
 
+**At 0% fees (subsidy only):**
+```
+Hashvalue = (144 × 3.125 × 100,000,000) / Network Hashrate (TH/s)
          = 45,000,000,000 / Network Hashrate (TH/s)
 ```
 
-**Example:** At 800 EH/s (800,000,000 TH/s):
+**Example at 800 EH/s with 0% fees:**
 ```
 Hashvalue = 45,000,000,000 / 800,000,000 = 56.25 sats/TH/day
+```
+
+**Example at 800 EH/s with 20% fees:**
+```
+Total Block Reward = 3.125 / 0.80 = 3.906 BTC
+Hashvalue = (144 × 3.906 × 100,000,000) / 800,000,000 = 70.31 sats/TH/day
 ```
 
 #### Hashprice ($/TH/day)
@@ -496,11 +541,14 @@ For Canadian users:
 | Term | Definition |
 |------|------------|
 | **AFUE** | Annual Fuel Utilization Efficiency. Percentage of fuel converted to heat. |
+| **Block Subsidy** | The fixed BTC reward per block (currently 3.125 BTC). Halves approximately every 4 years. |
 | **COP** | Coefficient of Performance. Heat output divided by electricity input (for heat pumps). |
 | **COPe** | Coefficient of Performance - Economic. Exergy's metric comparing hashrate heating to electric resistance. |
 | **EH/s** | Exahashes per second. 1 EH = 1,000,000 TH. Measures Bitcoin network hashrate. |
+| **Fee %** | Transaction fees as a percentage of total block reward. Models periods of high/low network demand. |
 | **Hashprice** | Mining revenue per terahash per day, in dollars. |
 | **Hashvalue** | Mining revenue per terahash per day, in satoshis. |
 | **J/TH** | Joules per terahash. Measures miner efficiency. Lower = more efficient. |
 | **R** | Revenue ratio. Mining revenue divided by electricity cost. Same as Subsidy %. |
 | **TH/s** | Terahashes per second. Measures individual miner hashrate. |
+| **Total Block Reward** | Block subsidy plus transaction fees. What miners actually earn per block. |

@@ -18,6 +18,10 @@
       - [Canaan Avalon Q](./diy/integrations/avalon-q.md) <!--Q setup guide with exergy ha integration-->
       - [Canaan Avalon Nano 3s](./diy/integrations/avalon-nano-3s.md) <!--nano 3s setup guide with exergy ha integration-->
     - [Ocean Mining Pool Stats](./diy/integrations/ocean-pool.md) <!--overview of ocean pool ha integration-->
+    - [DATUM Gateway](./diy/integrations/datum-gateway.md) <!--DATUM Gateway monitoring integration-->
+    - [Public Pool](./diy/integrations/public-pool.md) <!--self-hosted Public Pool monitoring-->
+    - [Bitaxe](./diy/integrations/bitaxe.md) <!--Bitaxe miner monitoring and control-->
+    - [StealthMiner / LuxOS](./diy/integrations/stealthminer.md) <!--LuxOS firmware miner control-->
   - [Exergy HA Automations & Templates<!-- Blueprints-->](./diy/blueprints/overview.md) <!--overview of exergy ha automations-->
     - [Space Heater Thermostat Control](./diy/blueprints/space-heater.md) <!--thermostat control automation guide-->
     - [HVAC Integrated Thermostat Control](./diy/blueprints/hvac.md)  <!--hvac control automation guide-->
@@ -32,6 +36,7 @@
 
 - [Calculators Overview](./calculators/overview.md)
   - [Hashrate Heating Calculator](./calculators/hashrate-heating.md)
+  - [Solar Monetization Calculator](./calculators/solar-monetization.md)
 
 ---
 

@@ -59,6 +59,9 @@ The Avalon Q supports three performance levels:
 | Power | `sensor.avalon_q_power` | Current wattage |
 | Fan Speed | `sensor.avalon_q_fan_speed` | Fan RPM % |
 | Device State | `sensor.avalon_q_state` | Operating status |
+| WiFi Signal | `sensor.avalon_q_wifi_signal` | WiFi signal strength (disabled by default) |
+
+> **Note:** The WiFi Signal sensor is disabled by default. Enable it via **Settings > Devices & Services > Exergy Canaan > [device] > Entities** and click the disabled entity to enable.
 
 ### Controls
 

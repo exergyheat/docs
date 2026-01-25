@@ -77,6 +77,9 @@ The Mini 3 supports three operating modes:
 | Device State | `sensor.avalon_mini_3_state` | Operating status (Idle/Initializing/Working/Fault) |
 | Work Level | `sensor.avalon_mini_3_work_level` | Current level (Super/Eco) |
 | Work Mode | `sensor.avalon_mini_3_work_mode` | Current mode (Mining/Heating/Night) |
+| WiFi Signal | `sensor.avalon_mini_3_wifi_signal` | WiFi signal strength (disabled by default) |
+
+> **Note:** The WiFi Signal sensor is disabled by default. Enable it via **Settings > Devices & Services > Exergy Canaan > [device] > Entities** and click the disabled entity to enable.
 
 ### Controls
 

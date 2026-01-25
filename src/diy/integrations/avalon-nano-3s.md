@@ -52,6 +52,9 @@ The Nano 3s supports three operating modes:
 | Hashrate | `sensor.avalon_nano_3s_hashrate` | Current TH/s |
 | Power | `sensor.avalon_nano_3s_power` | Current wattage |
 | Device State | `sensor.avalon_nano_3s_state` | Operating status |
+| WiFi Signal | `sensor.avalon_nano_3s_wifi_signal` | WiFi signal strength (disabled by default) |
+
+> **Note:** The WiFi Signal sensor is disabled by default. Enable it via **Settings > Devices & Services > Exergy Canaan > [device] > Entities** and click the disabled entity to enable.
 
 ### Controls
 
