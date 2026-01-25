@@ -46,7 +46,7 @@ The Exergy Ocean integration provides:
 
 ### Worker Specific Sensors
 
-Workers are **automatically discovered** - if you have 3 workers, you'll get 18 additional sensors (6 per worker). Each worker appears as its own device under the main mining account device. For each worker detected, the following sensors are created dynamically:
+Workers are **automatically discovered** - if you have 3 workers, you'll get sensors and binary sensors for each. Each worker appears as its own device under the main mining account device. For each worker detected, the following entities are created dynamically:
 
 | Sensor | Description |
 |--------|-------------|
@@ -55,9 +55,14 @@ Workers are **automatically discovered** - if you have 3 workers, you'll get 18 
 | {worker_name} Last Share | Timestamp of worker's last submitted share |
 | {worker_name} Estimated Earnings Next Block | Worker's estimated BTC earnings for next block |
 | {worker_name} Lifetime Earnings | Worker's total lifetime BTC earnings (scraped from website) |
-| {worker_name} Status | Connected or Disconnected |
 
-> **Note:** Entity IDs are automatically generated based on your wallet address. Find your actual entity IDs at **Settings → Devices & Services → Exergy Ocean → [your device]**.
+### Worker Binary Sensors
+
+| Binary Sensor | Description |
+|---------------|-------------|
+| {worker_name} Online | Worker online/offline status (on = connected, off = disconnected) |
+
+> **Note:** Entity IDs are automatically generated based on your wallet address. Find your actual entity IDs at **Settings > Devices & Services > Exergy Ocean > [your device]**.
 
 ## Installation
 
@@ -167,11 +172,21 @@ Your Ocean wallet address is the bitcoin address you configured when setting up 
 ### Connect Your Miners
 To mine to Ocean, you need miners connected to Home Assistant:
 - [Canaan Avalon Home Integration](./exergy-canaan.md) - Connect Avalon miners
+- [Bitaxe Integration](./bitaxe.md) - Connect Bitaxe miners
+- [StealthMiner / LuxOS Integration](./stealthminer.md) - Connect LuxOS miners
+
+### Use DATUM Gateway
+Build your own block templates while mining to Ocean:
+- [DATUM Gateway Integration](./datum-gateway.md) - Monitor your DATUM Gateway
 
 ### Build a Dashboard
 Ocean sensors work great alongside miner stats:
-- [Space Heater Dashboard](../dashboards/space-heater.md) - Includes mining earnings display
-- [HVAC Dashboard](../dashboards/hvac.md) - System monitoring with earnings
+- [Dashboard Templates](../dashboards/overview.md) - Pre-built monitoring interfaces
+
+## Source Code & Support
+
+- **GitHub:** [github.com/exergyheat/ha-integration-ocean-pool](https://github.com/exergyheat/ha-integration-ocean-pool)
+- **Support Forum:** [support.exergyheat.com](https://support.exergyheat.com)
 
 ## Resources
 
