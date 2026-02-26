@@ -42,7 +42,7 @@ This section walks through our open-source documentation on how to build and run
 ##### Step 3: Add Integrations
 [Exergy HA Integrations](./diy/integrations/overview.md)
 
-- Install the Exergy integrations (like applications on HA) to easily connect and manage your hashrate heaters in your soverign smart home, with real time control and data read outs.
+- Install the Exergy integrations (like applications on HA) to easily connect and manage your hashrate heaters in your sovereign smart home, with real time control and data read outs.
 
 ##### Step 4: Configure Automations
 [Exergy HA Automation Blueprints](./diy/blueprints/overview.md)

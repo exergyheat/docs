@@ -22,7 +22,7 @@ Integrations handle the connection. Once your devices are connected, [automation
 Home Assistant includes over 2,000 official integrations out of the box. These are:
 
 - Built into Home Assistant core
-- Maintained by Home Assistant team or Meet Home Assistant team criterea for offical integrations
+- Maintained by the Home Assistant team or meeting Home Assistant criteria for official integrations
 - Configured through **Settings → Devices & Services**
 
 Common examples: Google Cast, Philips Hue, MQTT, Zigbee (ZHA), weather services.
