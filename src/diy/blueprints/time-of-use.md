@@ -327,4 +327,4 @@ Create separate 'helper' entities to edit on the fly such as:
 ## Resources
 
 - [Home Assistant Time Trigger Docs](https://www.home-assistant.io/docs/automation/trigger/#time-trigger)
-- [Exergy GitHub - Blueprints](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)

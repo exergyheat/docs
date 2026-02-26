@@ -287,4 +287,4 @@ views:
 
 - [Home Assistant Dashboard Docs](https://www.home-assistant.io/dashboards/)
 - [HACS Frontend Cards](https://hacs.xyz/)
-- [Exergy GitHub - Dashboard Templates](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)

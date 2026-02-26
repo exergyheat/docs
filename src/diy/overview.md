@@ -58,7 +58,7 @@ This section walks through our open-source documentation on how to build and run
 
 Find all open-source Exergy code on our Github:
 
-**[github.com/exergyheat](https://github.com/exergyheat)**
+**[github.com/exergyheat/docs](https://github.com/exergyheat/docs)**
 
 ### Contributing
 

@@ -58,7 +58,7 @@ It's like a smart thermostat display—but with your bitcoin mining data alongsi
 
 **Live Demo:** See a fully configured system at **[demo.exergyheat.com](https://demo.exergyheat.com)**
 
-All templates available on GitHub: **[github.com/exergyheat](https://github.com/exergyheat)**
+All templates available on GitHub: **[github.com/exergyheat/docs](https://github.com/exergyheat/docs)**
 
 ## Installing Dashboard Templates
 

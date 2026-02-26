@@ -52,7 +52,7 @@ These automations pair with Exergy hardware kits and installed systems, but work
 | [HVAC Integration](./hvac.md) | Whole-home thermostat integration |
 | [Time-of-Use](./time-of-use.md) | Optimize mining around electricity rates |
 
-See all Exergy Automations<!-- blueprints-->: **[github.com/exergyheat](https://github.com/exergyheat)**
+See all Exergy Automations<!-- blueprints-->: **[github.com/exergyheat/docs](https://github.com/exergyheat/docs)**
 
 <!--## Installing Blueprints
 

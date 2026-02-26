@@ -242,7 +242,7 @@ This integration requires BeautifulSoup4. If you encounter import errors:
 
 - [DATUM Gateway GitHub](https://github.com/OCEAN-xyz/datum_gateway)
 - [Ocean Pool](https://ocean.xyz)
-- [Exergy GitHub](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)
 - [Exergy Community Forum](https://support.exergyheat.com)
 
 ## Source Code & Support
