@@ -29,7 +29,7 @@ This section walks through our open-source documentation on how to build and run
 #### Home Assistant DIY Overview
 
 ##### Step 1: Set Up Home Assistant
-[Raspberry Pi](./diy/brains/rpi-ha.md)
+[Raspberry Pi](./brains/rpi-ha.md)
 
 - Build the required hardware and install Home Assistant. Complete the setup and configure get your home brain ready for hashrate heating.
 
@@ -40,17 +40,17 @@ This section walks through our open-source documentation on how to build and run
 - Choose your favorite bitcoin mining heater (Avalon Mini 3, Avalon Q, or Nano 3s), follow the initial device setup and connect it to your local network.
 
 ##### Step 3: Add Integrations
-[Exergy HA Integrations](./diy/integrations/overview.md)
+[Exergy HA Integrations](./integrations/overview.md)
 
 - Install the Exergy integrations (like applications on HA) to easily connect and manage your hashrate heaters in your soverign smart home, with real time control and data read outs.
 
 ##### Step 4: Configure Automations
-[Exergy HA Automation Blueprints](./diy/blueprints/overview.md)
+[Exergy HA Automation Blueprints](./blueprints/overview.md)
 
 - Use our blueprints as a starting point, or build your own automations from scratch. Tie together heat, thermostats, miners, temperature sensors, timing, and more.
 
 ##### Step 5: Build Your Dashboard
-[Exergy HA Dashboard Templates](./diy/dashboards/overview.md)
+[Exergy HA Dashboard Templates](./dashboards/overview.md)
 
 - Create a control interface using our templates or design your own. Visualize everything at a glance and control from anywhere.
 
