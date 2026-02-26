@@ -27,7 +27,7 @@
     - [HVAC Integrated Thermostat Control](./diy/blueprints/hvac.md)  <!--hvac control automation guide-->
     - [Time of Use Control](./diy/blueprints/time-of-use.md)  <!--time of use control automation guide-->
   - [Exergy HA Dashboard Templates](./diy/dashboards/overview.md) <!--overview of exergy ha dashboards-->
-    <!--- [Space Heater Digital Thermostat](./diy/dashboards/space-heater.md) <!--space heater dashboard guide-->-->
+    - [Space Heater Digital Thermostat](./diy/dashboards/space-heater.md) <!--space heater dashboard guide-->
     - [HVAC Integrated Wall+Digital Thermostat](./diy/dashboards/upstairs.md) <!--hvac dashboard guide-->
 
 ---
