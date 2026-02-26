@@ -27,7 +27,7 @@ Click each model for detailed specifications, available sensors, and control opt
 
 ### Prerequisites
 
-- **Home Assistant with HACS installed** - HACS is the Home Assistant Community Store where custom integrations are distributed. See our [system configuration guide](../brains/rpi-ha-config.md) if you need to install it.
+- **Home Assistant with HACS installed** - HACS is the Home Assistant Community Store where custom integrations are distributed. See our [HACS installation guide](../brains/install-hacs.md) if you need to install it.
 - **Miner on the same network** - Your miner and Home Assistant need to communicate over your local network.
 - **Miner's IP address** - See [Finding Your Miner's IP Address](#finding-your-miners-ip-address) below.
 

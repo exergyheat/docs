@@ -35,7 +35,7 @@ HACS (Home Assistant Community Store) extends Home Assistant with community-deve
 - **Easy installation** - HACS provides a store-like interface for discovery and updates
 - **Where Exergy integrations *currently* live** - Our bitcoin miner integrations are available through HACS
 
-To use custom integrations, you first install HACS, documented [here](../brains/rpi-ha-config.md), then browse and install the integrations you need.
+To use custom integrations, you first install HACS, documented [here](../brains/install-hacs.md), then browse and install the integrations you need.
 
 ## Common Integrations
 

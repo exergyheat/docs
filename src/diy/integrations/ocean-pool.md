@@ -7,7 +7,7 @@ Monitor your Ocean mining pool earnings and statistics directly in Home Assistan
 
 Before installing this integration:
 
-1. **Home Assistant with HACS installed** - This is a custom integration distributed via HACS. See our [system configuration guide](../brains/rpi-ha-config.md) if you need to set up Home Assistant and HACS.
+1. **Home Assistant with HACS installed** - This is a custom integration distributed via HACS. See our [HACS installation guide](../brains/install-hacs.md) if you need to install HACS.
 
 2. **Already mining to Ocean** - Your miners must be configured to mine to Ocean pool. The integration pulls data from Ocean's API based on your wallet address.
 

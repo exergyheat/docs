@@ -9,7 +9,7 @@ Before installing this integration:
 
 1. **Home Assistant 2023.1.0 or newer** - This integration requires HA 2023.1.0+.
 
-2. **HACS installed** - This is a custom integration distributed via HACS. See our [system configuration guide](../brains/rpi-ha-config.md) if you need to set up HACS.
+2. **HACS installed** - This is a custom integration distributed via HACS. See our [HACS installation guide](../brains/install-hacs.md) if you need to install HACS.
 
 3. **DATUM Gateway running** - You need a DATUM Gateway instance running v0.4.0 or higher.
 
