@@ -1,7 +1,7 @@
 <!--explain the high level overview of the home assistant part of the DIY section-->
 # Home Assistant
 
-Home Assistant is a free, open-source home automation platform that puts local control and privacy first. It's an excellent foundation for hashrate heating and monetizing solar.  Custom Exergy integrations enable bitcoin miners to easily become IoT devices that can interact with and be controled via a smart home interface.
+Home Assistant is a free, open-source home automation platform that puts local control and privacy first. It's an excellent foundation for hashrate heating and monetizing solar.  Custom Exergy integrations enable bitcoin miners to easily become IoT devices that can interact with and be controlled via a smart home interface.
 
 ## Why Home Assistant?
 

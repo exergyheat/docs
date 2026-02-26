@@ -1,7 +1,7 @@
 <!--explain the high level purpose of this docs website-->
 # Introduction
 
-Welcome to the **Exergy Documentation** - your guide to the soverign smart building - maximzing efficiency and monetizing heat.
+Welcome to the **Exergy Documentation** - your guide to the sovereign smart building - maximizing efficiency and monetizing heat.
 
 ## What is Exergy?
 
@@ -15,7 +15,7 @@ Exergy provides hardware, software, and services that make it easy to integrate 
 
 | Section | Description |
 |---------|-------------|
-| **DIY** | Build your own soverign system with Exergy integrations, blueprints, and templates |
+| **DIY** | Build your own sovereign system with Exergy integrations, blueprints, and templates |
 | **Reference** | Reference specifications, troubleshooting, and FAQ |
 
 
