@@ -12,6 +12,7 @@
     - [Raspberry Pi](./diy/brains/rpi-ha.md) <!--overview of building a pi based ha-->
       - [Hardware Setup](./diy/brains/rpi-ha-hardware.md) <!--hardware setup guide for pi based ha-->
       - [System Configuration](./diy/brains/rpi-ha-config.md)<!--software config guide for pi based ha-->
+  - [Install HACS](./diy/brains/install-hacs.md)
   - [Exergy HA Integrations](./diy/integrations/overview.md)<!--overview of exergy ha integrations-->
     - [Canaan Avalon Home Miners](./diy/integrations/exergy-canaan.md) <!--overview of canaan home miner ha integration-->
       - [Canaan Avalon Mini 3](./diy/integrations/avalon-mini-3.md) <!--mini 3 setup guide with exergy ha integration-->
