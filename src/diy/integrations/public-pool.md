@@ -7,7 +7,7 @@ Monitor your self-hosted Public Pool instance directly in Home Assistant. Compat
 
 Before installing this integration:
 
-1. **Home Assistant with HACS installed** - This is a custom integration distributed via HACS. See our [system configuration guide](../brains/rpi-ha-config.md) if you need to set up Home Assistant and HACS.
+1. **Home Assistant with HACS installed** - This is a custom integration distributed via HACS. See our [HACS installation guide](../brains/install-hacs.md) if you need to install HACS.
 
 2. **Self-hosted Public Pool running** - You need a Public Pool instance running (self-hosted or Start9).
 

@@ -7,7 +7,7 @@ Integrate your bitcoin miner into your home's HVAC system as "Stage 1" heating, 
 
 - **Miner connected to Home Assistant** - Install the [Canaan Avalon Home Integration](../integrations/exergy-canaan.md) first
 - **Smart thermostat** - Connected to HA (Z-Wave, Zigbee, or WiFi)
-- **Home Assistant with HACS** - See our [system configuration guide](../brains/rpi-ha-config.md) if needed
+- **Home Assistant with HACS** - See our [HACS installation guide](../brains/install-hacs.md) if needed
 - **Professional installation** - Ducting and wiring modifications recommended
 
 ## How It Works
