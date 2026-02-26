@@ -212,4 +212,4 @@ See [Space Heater Digital Thermostat](../dashboards/space-heater.md) for a match
 
 - [Home Assistant Automation Docs](https://www.home-assistant.io/docs/automation/)
 - [Generic Thermostat Integration](https://www.home-assistant.io/integrations/generic_thermostat/)
-- [Exergy GitHub](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)

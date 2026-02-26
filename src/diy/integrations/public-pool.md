@@ -291,7 +291,7 @@ At 1 TH/s against ~600 EH/s network, expect very long times between blocks. Publ
 
 - [Public Pool GitHub](https://github.com/benjamin-wilson/public-pool)
 - [Start9 Documentation](https://start9.com)
-- [Exergy GitHub](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)
 - [Exergy Community Forum](https://support.exergyheat.com)
 
 ## Source Code & Support

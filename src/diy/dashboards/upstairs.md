@@ -487,4 +487,4 @@ The dashboard automatically adapts to mobile screens:
 - [Venstar Integration](https://www.home-assistant.io/integrations/venstar/)
 - [Template Sensors](https://www.home-assistant.io/integrations/template/)
 - [Ocean Mining Pool](https://ocean.xyz/)
-- [Exergy GitHub - Dashboard Templates](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)

@@ -192,4 +192,4 @@ Ocean sensors work great alongside miner stats:
 
 - [Ocean Pool](https://ocean.xyz)
 - [Ocean Documentation](https://ocean.xyz/docs)
-- [Exergy GitHub](https://github.com/exergyheat)
+- [Exergy Docs on GitHub](https://github.com/exergyheat/docs)

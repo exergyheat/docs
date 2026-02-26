@@ -75,14 +75,14 @@ We built integrations to bring bitcoin miners into the smart home ecosystem. Con
 | [Public Pool](./public-pool.md) | Monitor self-hosted Public Pool instances |
 | [DATUM Gateway](./datum-gateway.md) | Monitor DATUM Gateway block template proxy |
 
-See a full list of Exergy Integrations here:
+See all Exergy integrations on GitHub:
 
-[Index of Exergy's Home Assistant Integrations](https://github.com/exergyheat/ha-integrations-index)
+**[github.com/exergyheat](https://github.com/exergyheat)**
 
 ## GitHub
 
 All Exergy integrations are open source:
 
-**[github.com/exergyheat](https://github.com/exergyheat)**
+**[github.com/exergyheat/docs](https://github.com/exergyheat/docs)**
 
 Contributions welcome—bug reports, feature requests, and code contributions.
